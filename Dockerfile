@@ -39,7 +39,7 @@ RUN tar xzf v1.3.3.tar.gz
 
 FROM debian:10-slim
 RUN apt-get update && \
-    apt-get install -y ncurses-base zlib1g liblzma5 libbz2-1.0 curl libcurl4 r-base gcc g++ zlib1g-dev && \
+    apt-get install -y ncurses-base zlib1g liblzma5 libbz2-1.0 curl libcurl4 r-base gcc g++ zlib1g-dev python && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 COPY --from=samtools-build /usr/local /usr/local
